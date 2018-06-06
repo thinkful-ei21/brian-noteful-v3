@@ -44,19 +44,23 @@ describe('GET api/notes', function(){
 
   it('should return all the notes in the database', function(){
     let res;
-    return chai.request(app)
-      .get('/api/notes')
+     return chai.request(app)
+      .get('/api/notes ')
       .then(function(_res){
         res = _res;
         expect(_res).to.have.status(200);
-        console.log(_res.body);
+
         expect(_res.body).to.be.a('array');
         //expect(_res.body).to.have.length(Note.length);
-      return Note.count();
-      })
-  })
+      //return Note.count();
+    })
+    // .then(
+    //   count => { console.log(count);}
+  //  );
+  });
 
-})
+});
+});
 //////post////
 // describe('POST /api/notes', function () {
 //     it('should create and return a new item when provided valid data', function () {
@@ -118,6 +122,3 @@ describe('GET api/notes', function(){
 //         });
 //     });
 //   })
-
-
-});

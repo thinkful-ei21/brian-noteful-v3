@@ -27,12 +27,7 @@ router.get('/', (req, res, next) => {
         res.json(results);
       })
 
-  console.log('Get All Notes');
-  res.json([
-    { id: 1, title: 'Temp 1' },
-    { id: 2, title: 'Temp 2' },
-    { id: 3, title: 'Temp 3' }
-  ]);
+
 
 });
 
